@@ -1,3 +1,5 @@
+import React from 'react';
+
 import km_1 from '../images/km_1.png';
 import km_2 from '../images/km_2.png';
 import km_3 from '../images/km_3.png';

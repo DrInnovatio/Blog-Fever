@@ -11,7 +11,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import SimpleAccordion from './accordion';
 import Checkbox from '@mui/material/Checkbox';
 import { addDoc, collection } from 'firebase/firestore';
-import { db } from '../firebase/firestore';
+import { db } from '../firebase';
 
 
 const styles = {
