@@ -1,24 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+//import Logo from './components/logo';
+import Slideshow from './components/slideshow';
+import BasicTextFields from '../src/components/form';
+import Footer from './components/footer';
+import KmongImages from './components/kmong';
+import BasicCard from './components/card';
+import 'react-slideshow-image/dist/styles.css'
+import './App.css'; 
+
+
+const styles = {
+  main: {
+    width: '75%',
+    height: 'auto',
+    alignText: 'center',
+    margin: '2rem auto',
+  },
+  inputText: {
+      padding: "1rem"
+  },
+  
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         New Blog Project
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="App" style={styles.main}>
+
+        <section>
+            <Slideshow/>
+        </section>
+        
+        <section>
+            <KmongImages/>
+        </section>
+        <Box
+          component="form"
+          sx={{
+            '& > :not(style)': { m: 1, width: '60ch' },
+          }}
+          noValidate
+          autoComplete="off"
+          style={ styles.inputs }
+          maxWidth="md"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+        <BasicCard/>
+
+        <BasicTextFields />
+        
+        </Box>
+    
+   
+       <Footer/>
+      </div>
+    
   );
 }
 
